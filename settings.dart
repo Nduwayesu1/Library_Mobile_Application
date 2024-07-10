@@ -19,11 +19,6 @@ class SettingsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Sort Books By',
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 12.0),
-                Text(
                   'Theme',
                   style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 ),
