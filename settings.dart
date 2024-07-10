@@ -18,10 +18,7 @@ class SettingsScreen extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Theme',
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                ),
+                // Removed the 'Mode' text widget here
                 SizedBox(height: 12.0),
                 SwitchListTile(
                   title: Text('Dark Mode'),
