@@ -14,14 +14,18 @@ class SettingsScreen extends StatelessWidget {
         child: Consumer<ThemeProvider>(
           builder: (context, themeProvider, child) {
             bool isDarkMode = themeProvider.isDarkMode;
+            String modeText = isDarkMode ? 'Dark Mode' : 'Light Mode';
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Removed the 'Mode' text widget here
+                Text(
+                  modeText,
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                ),
                 SizedBox(height: 12.0),
                 SwitchListTile(
-                  title: Text('Dark Mode'),
+                  title: Text(modeText),
                   value: isDarkMode,
                   onChanged: (value) {
                     themeProvider.toggleTheme();
