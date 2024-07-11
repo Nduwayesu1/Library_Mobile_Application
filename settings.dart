@@ -42,7 +42,7 @@ class SettingsScreen extends StatelessWidget {
                   value: 'title',
                   groupValue: currentSorting,
                   onChanged: (value) {
-                    themeProvider.setSortingPreference("Best");
+                    themeProvider.setSortingPreference('title');
                   },
                 ),
                 RadioListTile<String>(
@@ -50,7 +50,7 @@ class SettingsScreen extends StatelessWidget {
                   value: 'author',
                   groupValue: currentSorting,
                   onChanged: (value) {
-                    themeProvider.setSortingPreference("Good");
+                    themeProvider.setSortingPreference('author');
                   },
                 ),
                 RadioListTile<String>(
@@ -58,7 +58,7 @@ class SettingsScreen extends StatelessWidget {
                   value: 'rating',
                   groupValue: currentSorting,
                   onChanged: (value) {
-                    themeProvider.setSortingPreference("Good");
+                    themeProvider.setSortingPreference('rating');
                   },
                 ),
               ],
