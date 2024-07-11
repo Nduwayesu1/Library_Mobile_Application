@@ -15,6 +15,7 @@ class SettingsScreen extends StatelessWidget {
           builder: (context, themeProvider, child) {
             bool isDarkMode = themeProvider.isDarkMode;
             String modeText = isDarkMode ? 'Dark Mode' : 'Light Mode';
+            String currentSorting = themeProvider.sortingPreference;
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,6 +30,35 @@ class SettingsScreen extends StatelessWidget {
                   value: isDarkMode,
                   onChanged: (value) {
                     themeProvider.toggleTheme();
+                  },
+                ),
+                SizedBox(height: 24.0),
+                Text(
+                  'Sort by:',
+                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                ),
+                RadioListTile<String>(
+                  title: Text('Title'),
+                  value: 'title',
+                  groupValue: currentSorting,
+                  onChanged: (value) {
+                    themeProvider.setSortingPreference("Best");
+                  },
+                ),
+                RadioListTile<String>(
+                  title: Text('Author'),
+                  value: 'author',
+                  groupValue: currentSorting,
+                  onChanged: (value) {
+                    themeProvider.setSortingPreference("Good");
+                  },
+                ),
+                RadioListTile<String>(
+                  title: Text('Rating'),
+                  value: 'rating',
+                  groupValue: currentSorting,
+                  onChanged: (value) {
+                    themeProvider.setSortingPreference("Good");
                   },
                 ),
               ],
